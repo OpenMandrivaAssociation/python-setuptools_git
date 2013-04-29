@@ -1,16 +1,15 @@
 %define module setuptools_git
 Name:           python-%module
 Version:        0.3
-Release:        %mkrel 1
+Release:        2
 Summary:        Setuptools_git package
 License:        BSD License
 Group:          Development/Python
 Source:         %module-%{version}.tar.gz
-URL:            http://ygingras.net/b/tag/%modules
+URL:            http://ygingras.net/b/tag/%module
 BuildRequires:  python-devel
-Buildrequires:	 python-setuptools
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
-buildarch:	noarch
+BuildRequires:	 python-setuptools
+BuildArch:	noarch
 
 
 %description
@@ -26,13 +25,8 @@ inclusion specifications with `MANIFEST.in`.
 CFLAGS="%{optflags}" python setup.py build
 
 %install
-rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install --root $RPM_BUILD_ROOT --install-purelib=%{python_sitelib}
-
-%clean
-rm -rf %{buildroot}
+%{__python} setup.py install --root %{buildroot} --install-purelib=%{python_sitelib}
 
 %files
-%defattr(-,root,root)
 %{python_sitelib}/*
 
