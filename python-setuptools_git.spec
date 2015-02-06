@@ -1,7 +1,7 @@
 %define module setuptools_git
 Name:           python-%module
 Version:        0.3
-Release:        2
+Release:        3
 Summary:        Setuptools_git package
 License:        BSD License
 Group:          Development/Python
