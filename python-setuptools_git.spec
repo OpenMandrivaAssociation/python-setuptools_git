@@ -6,7 +6,7 @@ Summary:        Setuptools_git package
 License:        BSD License
 Group:          Development/Python
 Source:         %module-%{version}.tar.gz
-URL:            http://ygingras.net/b/tag/%module
+URL:            https://ygingras.net/b/tag/%module
 BuildRequires:  python-devel
 BuildRequires:	 python-setuptools
 BuildArch:	noarch
